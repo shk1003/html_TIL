@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김서희 | 웹디자이너&웹퍼블리셔&프론트엔드</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- HTML 내부 CSS 작성 위치(head안title다음) -->
+    <style>
+        /* 선택자 { 속성:값; 속성:값; } */
+        /* div {background-color:aqua;} */
+        /* 모든 HTML 선택자 작성 -> 속성:값 채우기 */
+        body {background-color:#000;}
+        #wrap {
+            background-color:#fff;
+            /* 크기 width, height 0이 아닌 수 단위필수!! */
+            width:440px; height:100vh;/* vieport height */
+            /* 안쪽 여백 padding */
+            padding-left:15px;
+            padding-right:15px;
+        }
+        #wrap header {}
+        #wrap header .profile_img {}
+        #wrap header .profile_img img {}
+        #wrap header h1 {
+            /* 글자 굵기 Regular 400 기준 +- 100 */
+            font-family:'pretendard';
+            font-size:32px; /* 행간, 자간 기본값 생략 */
+            margin-top:8px;
+            margin-bottom:8px;
+            font-weight:600;
+        }
+        #wrap header h1+h2 {
+            font-family:'pretendard';
+            font-size:16px;
+            padding-bottom:15px;
+            margin-bottom:15px;
+            border-bottom:1px solid #000;
+        }
+        /* main~footer */
+        #wrap main {}
+        #wrap main h2 {
+            font-family:'pretendard';
+            font-size:14px;
+            font-weight:600;
+            margin-bottom:20px;
+        }
+        #wrap main .block {
+            background-color:#eee;
+            padding-top:10px; padding-bottom:20px;
+            padding-left:15px; padding-right:15px;
+            /* 글자 속성 */
+            font-family:'pretendard';
+            font-size:13px;
+            line-height:150%; /* 행간 */
+            color:#195AFF;
+            /* 블록과 인라인 요소 띄우기 */
+            margin-bottom:16px;
+        }
+        #wrap main .inline {
+            background-color:#eee;
+            padding-top:10px; padding-bottom:20px;
+            padding-left:15px; padding-right:15px;
+            font-family:'pretendard';
+            font-size:13px;
+            line-height:150%;
+            color:#FF9F19;
+            margin-bottom:16px;
+        }
+        /* 결과보기 */
+        #wrap .result {}
+        #wrap .result li{
+            font-family:'pretendard';
+            font-size:14px;
+            margin-bottom:20px;
+        }
+        #wrap .result li img{}
+        #wrap .result li a{}
+        /* footer */
+        #wrap footer {}
+        #wrap footer p {}
+        #wrap footer p em {
+            font-family:'pretendard';
+            font-size:14px;
+        }
+        #wrap footer p span {
+            font-family:'pretendard';
+            font-size:14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <p class="profile_img"><img src="./images/profile_photo.jpg"></p>
+            <h1>김서희</h1>
+            <h2>UI/UX 프론트엔드 반응형웹디자인&웹퍼블리셔 개발 양성과정</h2>
+        </header>
+        <main>
+            <h2>HTML 공부태그</h2>
+            <div class="block">
+                h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, li, dl, dt, dd, hr, div, header, seciton, aside, nav, footer, article, main, a, video
+            </div>
+            <div class="inline">
+                span, em, strong, br, img, a, sup, sub, code, mark, s, q, del
+            </div>
+            <h2>작업 결과 바로가기</h2>
+            <ul class="result">
+                <li><img src="./images/Rectangle 1.png"><a href="./figma_layout/leeddeok.html">figma_layout/leeddeok</a></li>
+                <li><img src="./images/Rectangle 1.png"><a href="./figma_layout/ohou_product.html">figma_layout/ohou</a></li>
+                <li><img src="./images/Rectangle 1.png"><a href="./figma_layout/soopsori.html">figma_layout/soopsori</a></li>
+            </ul>
+            <h2>과제 제출</h2>
+            <ul class="result">
+                <li><img src="./images/Rectangle 1.png" alt=""><a href="완성링크추가">대백과사전 HTML</a></li>
+            </ul>
+        </main>
+        <footer>
+            <p>
+                <em>김서희</em>
+                <span>sgim02311@gmail.com</span>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
