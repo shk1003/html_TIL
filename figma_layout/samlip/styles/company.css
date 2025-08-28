@@ -1,0 +1,102 @@
+#wrap {
+    background-color: var(--color-grayf1);
+}
+#wrap main {
+    text-align: center;
+}
+#wrap main .path {
+    font-size: var(--text-sub12);
+    text-align: right;
+    padding:20px 80px 20px;
+}
+#wrap main .path a {}
+#wrap main .top {background-color:var(--color-white); padding: 50px 0 50px; width: 100%; }
+#wrap main .path img {
+    margin: 0 10px 0;
+}
+#wrap main .path .current {}
+#wrap main h1 {
+    font-size: var(--text-title70);
+    font-weight: var(--weight-bold);
+    text-align: center;
+    margin: 0 0 26px;
+    /* background-color: yellow; */
+}
+#wrap main > p {
+    font-size:var(--text-menu18);
+    margin: 26px 0 54px;
+}
+#wrap main .bg {
+    
+}
+#wrap main .bg > *:nth-child(odd ){/* background-color: brown; */}
+#wrap main .bg > p {
+    font-size: var(--text-menu18);
+    text-align: center;
+    padding: 50px 0 0;
+}
+#wrap main .bg > h2::before {
+    content: ''; background: var(--color-grayd);
+    width: var(--width-desktop); height: 1px; display: block; margin: 0 auto;
+    margin: 60px;
+}
+#wrap main .bg > h2 {
+    font-size:var(--text-contents21) ;
+    color: var(--color-point);
+    margin: 50px ;
+    /* width: 1140px ; border-top: 1px solid var(--color-graya); margin:0 auto*/
+}
+#wrap main .bg > h3 {
+    font-size: var(--text-sub31);
+}
+#wrap main .bg .goal_list {
+    display: flex;
+    justify-content: center;
+    
+}
+#wrap main .bg .goal_list li {
+    border: 1px solid var(--color-grayd);
+    width: 250px; height: 250px; border-radius:160px ;
+    display: flex; justify-content: center;
+    align-items: center; flex-flow: column nowrap;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    margin: -10px;
+}
+#wrap main .bg .goal_list li:nth-child(1) {
+    background-color: var(--color-point);
+    
+}
+#wrap main .bg .goal_list li:nth-child(1) img {filter: invert(1);}
+#wrap main .bg .goal_list li:nth-child(2) {
+    background-color: var(--color-white);
+}
+#wrap main .bg .goal_list li:nth-child(2) img {}
+#wrap main .bg .goal_list li:nth-child(3) {
+    background-color: var(--color-goal);
+}
+#wrap main .bg .goal_list li:nth-child(3) img {filter: invert(1);}
+#wrap main .bg .goal_list li img {}
+#wrap main .bg .goal_list li:nth-child(1),
+#wrap main .bg .goal_list li:nth-child(3) {color: var(--color-white);}
+#wrap main .bg .goal_list li span {
+    padding: 10px;
+}
+#wrap main .bg .strategy_list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+#wrap main .bg .strategy_list li {
+    border: 1px solid var(--color-grayd);
+    width: 180px; height: 180px; border-radius:90px ;
+    display: flex; justify-content: center;
+    align-items: center; flex-flow: column nowrap;
+    padding: 10px; background-color: var(--color-white);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    margin: -5px;
+}
+#wrap main .bg .strategy_list li h3 {
+    padding: 10px;
+    font-weight: var(--weight-bold);
+}
+#wrap main .bg .strategy_list li p {}
