@@ -20,6 +20,7 @@ header .h_container {max-width:1200px; margin:0 auto;
     display:flex; flex-flow:row nowrap;
     justify-content:space-between;
     align-items: center; height: 100%;
+    
     } 
 header h1 {}
 header h1 a {}
@@ -35,6 +36,13 @@ header nav > ul > li {padding:0 10px; position:relative;}
 header nav > ul > li > a {}
 header nav > ul > li > .sub {
     position:absolute; 
+    opacity: 0; /* 1==100% */
+    transform: translateY(-80px); 
+    transition: opacity 0.5s, transform 1s;
+}
+header nav > ul > li:hover .sub {
+    opacity: 1;
+    transform: translateY(0); 
 }
 header nav > ul > li > .sub li {width:100px; padding: 10px 0 0;}
 header nav > ul > li > .sub li a {}
@@ -47,7 +55,7 @@ section .sec3 {background-image:url(../images/main_bg_03.jpg)}
 section > div {
     background-size:cover; background-position:center;
     text-align:center; height:100vh; width:100%; 
-    display:flex; flex-flow:column wrap; justify-content:center; color:#fff;
+    display:flex; flex-flow:column wrap; justify-content:center; color:#fff; background-attachment: fixed;
 }
 section > div:nth-child(2) {
     background-repeat:no-repeat;
@@ -57,8 +65,45 @@ section > div:nth-child(2) {
 section > div h1 {
     font-family: 'Pattaya', sans-serif;
     font-size:3.0em; line-height:1.5;
+    position: relative; z-index: 100;
 }
-section > div p {font-size:0.875em; letter-spacing:-0.2px; line-height:1.7;}
+section > div p {
+    font-size:0.875em; letter-spacing:-0.2px; line-height:1.7;
+}
+/* 2번째 sec -> 애니메이션 공부 */
+section .sec2 .container {
+    background: rgba(0, 0, 225, 0.5);
+    width: 1440px; margin: 0 auto;
+    position: relative;
+}
+section .sec2 .container h1 {position: relative; z-index: 60; color: #fff;}
+section .sec2 .container h1 + p {position: relative; z-index: 60; color: #fff;}
+section .sec2 .container .space {
+    position: absolute; z-index: 50; top: 50%; transform: translateY(-50%);
+}
+section .sec2 .container .space img {}
+section .sec2 .container .space1 {left: 0;}
+section .sec2 .container .space1 img {animation: move100 1s 8 alternate both;}
+section .sec2 .container .space2 {right:0;}
+section .sec2 .container .space2 img {animation: rotate360 10s linear infinite; }
+section .sec2 .container .space3 {left: 50%; transform: translate(-50%, -50%);}
+section .sec2 .container .space3 img {animation: moveleft 5s linear infinite;}
+/* 애니메이션 준비 1. keyframes */
+/* 애니메이션 준비 2. 적용 요소선택자 animation 속성으로 키프레임 불러오기 */
+/* @keyframes 애니메이션이름 {from~to 또는 0~100% 최소 2개 이상 장면분기}*/
+@keyframes rotate360 {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes move100 {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-150px);}
+}
+@keyframes moveleft {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-150px);}
+    100% {transform: translateY(100px);}
+}
 /*footer*/
 footer {
     position:fixed; left:0; bottom:0; height:100px;

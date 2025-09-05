@@ -25,18 +25,22 @@
 
         main #visual #deco .obj1 {
             top:170px; left:50%; margin-left:-342px;
+            animation: rotate 10s linear alternate infinite;
         }
         main #visual #deco .obj2 {
             left:0; top:150px;
+            animation: size 2s linear alternate infinite;
         }
         main #visual #deco .obj3 {
             left:100px; top:250px;
+            animation: rotate 2s linear alternate infinite;
         }
         main #visual #deco .obj4 {
             left:150px; top:350px;
         }
         main #visual #deco .obj5 {
             right:0; top:150px;
+            animation: rotate 2s linear alternate-reverse infinite;
         }
         main #visual #deco .obj6 {
             right:200px; top:250px;
@@ -69,7 +73,14 @@
         main .category a.active {background:#26bad7; color:#fff;}
 
         /* 애니메이션 */
-
+        @keyframes size {
+            0% {transform: scale(100%) ;}
+            100% {transform: scale(120%) ;}
+        }
+        @keyframes rotate {
+            0% {transform: rotate(0);}
+            100% {transform: rotate(20deg);}
+        }
     </style>
 </head>
 <body>
