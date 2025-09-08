@@ -13,6 +13,39 @@
 
         }//e:onload
     </script>
+    <style>
+        header .right a {color: #fff;}
+        main {position: relative;}
+        main::before, main::after {
+            background: linear-gradient(90deg, rgb(9,13,43),transparent);
+            content: ''; ; display:block ; width:30% ; height:100%;
+            position: absolute; z-index:500 ; top:0 ;
+        }
+        main::before {left: 0;}
+        main::after {right:0 ; transform:scaleX(-1) ;}
+        main > section , main > div {position: relative; z-index: 400;}
+        main .bg_wrap .bg {}
+        main .bg_wrap .bg1 {animation: move 100s linear infinite;}
+        main .bg_wrap .bg2 {animation: move 30s linear infinite;}
+        main .bg_wrap .bg3 {animation: move 10s linear infinite;}
+        main .car #left_tire,
+        main .car #right_tire
+        {animation: tire 1s linear infinite;}
+        main .scroll img {animation: mouse 2s linear alternate infinite;}
+        main .bg_wrap .bg1 {}
+        @keyframes tire {
+            0% {rotate: 0;}
+            100% {rotate: 360deg;}
+        }
+        @keyframes mouse {
+            0% {transform: translateY(0);}
+            100% {transform: translateY(-20px);}
+        }
+        @keyframes move {
+            0% {background-position-x:0 ;}
+            100% {background-position-x:1000px ;}
+        }
+    </style>
 </head>
 <body>
     <!-- rgb(9,13,43) , #1ECC8F-->
@@ -41,7 +74,7 @@
         </section>
         <div class="bg_wrap">
             <div class="bg bg1"><!-- <img src="images/bg_cloud.png" alt=""> --></div>
-            <div class="bg bg2"><!--<img src="images/bg_city1.png" alt=""> --></div>
+            <div class="bg bg2"><!-- <img src="images/bg_city1.png" alt=""> --></div>
             <div class="bg bg3"><!-- <img src="images/bg_city2.png" alt=""> --></div>
         </div>
         <!-- <ul class="car_list">

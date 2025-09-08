@@ -17,6 +17,8 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             color: transparent;
+            background-size: 200%;
+            animation: bg-gradient 5s linear infinite;
         }
         main h2 {
             font-family: 'Black Ops One';
@@ -35,8 +37,8 @@
         footer img {width:24px;}
         footer img:nth-child(1) {margin-right:10px;}
         @keyframes bg-gradient {
-            0% {}
-            100% {}
+            0% {background-position-x: 0;}
+            100% {background-position-x:1000px ;}
         }
     </style>
 </head>
